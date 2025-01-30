@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7; /* Soft background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Outer container for the game */
+div {
+  width: 400px; /* Larger outer box width */
+  padding: 30px; /* Larger padding around the content */
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Hover effect for the main game container */
+div:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Smaller inner content box (more narrow) */
+.inner-box {
+  width: 40%; /* Narrower width for the inner content (now 40% of the outer box) */
+  padding: 20px; /* Slightly increased padding */
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Input and Button Styling */
+input {
+  width: 100%; /* Full width inside the inner box */
+  padding: 12px;
+  margin: 0;
+  font-size: 1.2rem; /* Keep the font size normal */
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effect for Input Fields */
+input:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4); /* Green glow effect */
+}
+
+button {
+  width: 100%; /* Full width inside the inner box */
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:active {
+  transform: translateY(2px); /* Slightly push button down when clicked */
+}
+
+/* Feedback Text for Guessing Results */
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+p.game-over {
+  color: #e74c3c; /* Red for game over */
+  font-size: 1.3rem;
+}
+
+p.success {
+  color: #2ecc71; /* Green for success */
+  font-size: 1.3rem;
+}
+
+p.warning {
+  color: #f39c12; /* Yellow for feedback */
+  font-size: 1.1rem;
+}
+
+/* Guessed Numbers List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+li {
+  background-color: #fafafa;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+/* Game Over Section */
+.game-over-section {
+  margin-top: 20px;
+}
+
+.game-over-section button {
+  background-color: #3498db; /* Blue restart button */
+  padding: 12px 20px;
+  font-size: 1.1rem;
+}
+
+.game-over-section button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div {
+    width: 90%; /* Adjust width for medium screens */
+    padding: 20px;
+  }
+
+  input, button {
+    width: 80%; /* Keep inputs and buttons full-width on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    width: 95%; /* Further adjust for very small screens */
+  }
+
+  input, button {
+    width: 90%;
+  }
+}
